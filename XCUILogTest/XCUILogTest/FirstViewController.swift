@@ -12,7 +12,7 @@ final class FirstViewController: UIViewController {
     }
 
     @IBAction func welcome(_ sender: UIButton) {
-        LogRequest.send(log: Log(name: "welcome"))
+        Analytics.logEvent(eventName: "welcome")
         let viewController = SecondViewController()
         present(viewController, animated: true, completion: nil)
     }

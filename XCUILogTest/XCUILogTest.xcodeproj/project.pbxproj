@@ -10,6 +10,7 @@
 		33C37C85B75F867ADCCA33C2 /* Pods_XCUILogTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FAB324B34DE67B70F7720AD /* Pods_XCUILogTestUITests.framework */; };
 		3B87EBE5E6AF17485D8D9CD1 /* Pods_XCUILogTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6EBE88D9921DA1F26BE39AC /* Pods_XCUILogTestTests.framework */; };
 		46F7130FEEEE7F2E8896DCE5 /* Pods_XCUILogTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99AC442513208875A7C1E953 /* Pods_XCUILogTest.framework */; };
+		EF6C2896232E55D30064586E /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C2895232E55D30064586E /* Analytics.swift */; };
 		EFD2E04C232D4E6700C03DF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD2E04B232D4E6700C03DF7 /* AppDelegate.swift */; };
 		EFD2E056232D4E6900C03DF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFD2E055232D4E6900C03DF7 /* Assets.xcassets */; };
 		EFD2E059232D4E6900C03DF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFD2E057232D4E6900C03DF7 /* LaunchScreen.storyboard */; };
@@ -52,6 +53,7 @@
 		A6EBE88D9921DA1F26BE39AC /* Pods_XCUILogTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XCUILogTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA8A519DAE8A7AD321E4306A /* Pods-XCUILogTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCUILogTestUITests.release.xcconfig"; path = "Target Support Files/Pods-XCUILogTestUITests/Pods-XCUILogTestUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D1DF98D1486D25F097C4F77D /* Pods-XCUILogTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCUILogTestTests.release.xcconfig"; path = "Target Support Files/Pods-XCUILogTestTests/Pods-XCUILogTestTests.release.xcconfig"; sourceTree = "<group>"; };
+		EF6C2895232E55D30064586E /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
 		EFD2E048232D4E6700C03DF7 /* XCUILogTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XCUILogTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFD2E04B232D4E6700C03DF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFD2E055232D4E6900C03DF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				EFD2E081232D513F00C03DF7 /* FirstViewController.swift */,
 				EFD2E083232D514A00C03DF7 /* SecondViewController.swift */,
 				EFD2E0A6232D570600C03DF7 /* LogRequest.swift */,
+				EF6C2895232E55D30064586E /* Analytics.swift */,
 			);
 			path = XCUILogTest;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 			files = (
 				EFD2E084232D514A00C03DF7 /* SecondViewController.swift in Sources */,
 				EFD2E04C232D4E6700C03DF7 /* AppDelegate.swift in Sources */,
+				EF6C2896232E55D30064586E /* Analytics.swift in Sources */,
 				EFD2E0A7232D570600C03DF7 /* LogRequest.swift in Sources */,
 				EFD2E0A5232D558D00C03DF7 /* Log.swift in Sources */,
 				EFD2E082232D513F00C03DF7 /* FirstViewController.swift in Sources */,
@@ -599,8 +603,8 @@
 			baseConfigurationReference = 6933D12A062A7E3C6C1D3B0D /* Pods-XCUILogTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2BF4Z6Z9XH;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/XCUILogTest/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -608,6 +612,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = shota.kashihara.XCUILogTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -618,8 +623,8 @@
 			baseConfigurationReference = A5E4A90957328E3544402C94 /* Pods-XCUILogTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2BF4Z6Z9XH;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/XCUILogTest/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -627,6 +632,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = shota.kashihara.XCUILogTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

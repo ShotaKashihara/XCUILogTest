@@ -12,9 +12,9 @@ final class SecondViewController: UIViewController {
     }
 
     @IBAction func signUp(_ sender: UIButton) {
-        LogRequest.send(log: Log(name: "sign up"))
+        Analytics.logEvent(eventName: "sign_up")
     }
     @IBAction func signIn(_ sender: UIButton) {
-        LogRequest.send(log: Log(name: "sign in"))
+        Analytics.logEvent(eventName: "sign_in")
     }
 }

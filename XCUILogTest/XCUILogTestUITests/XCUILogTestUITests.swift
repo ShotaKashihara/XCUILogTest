@@ -8,6 +8,7 @@ final class XCUILogTestUITests: XCTestCase {
         LogServer.shared.start()
         let port = try! LogServer.shared.server.port()
         app.launchArguments.append(contentsOf: ["-port", "\(port)"])
+        app.launchEnvironment["TEST"] = "true"
         app.launch()
     }
 
@@ -21,8 +22,8 @@ final class XCUILogTestUITests: XCTestCase {
         sleep(1)
         let log = LogServer.shared.store
         XCTAssertEqual(log.filter { $0.name == "welcome" }.count, 1)
-        XCTAssertEqual(log.filter { $0.name == "sign in" }.count, 1)
-        XCTAssertEqual(log.filter { $0.name == "sign up" }.count, 0)
+        XCTAssertEqual(log.filter { $0.name == "sign_in" }.count, 1)
+        XCTAssertEqual(log.filter { $0.name == "sign_up" }.count, 0)
     }
 
     func testSignUpLog() {
@@ -31,7 +32,8 @@ final class XCUILogTestUITests: XCTestCase {
         sleep(1)
         let log = LogServer.shared.store
         XCTAssertEqual(log.filter { $0.name == "welcome" }.count, 1)
-        XCTAssertEqual(log.filter { $0.name == "sign up" }.count, 1)
-        XCTAssertEqual(log.filter { $0.name == "sign in" }.count, 0)
+        XCTAssertEqual(log.filter { $0.name == "sign_up" }.count, 1)
+        XCTAssertEqual(log.filter { $0.name == "sign_in" }.count, 0)
     }
 }
+
